@@ -1,4 +1,4 @@
-package com.example.catalogservice;
+package ie.atu.catalogservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
