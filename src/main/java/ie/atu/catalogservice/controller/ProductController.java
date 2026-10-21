@@ -1,5 +1,6 @@
 package ie.atu.catalogservice.controller;
 
+import ie.atu.catalogservice.dto.CreateProductRequest;
 import ie.atu.catalogservice.model.Product;
 import ie.atu.catalogservice.service.ProductService;
 import org.springframework.http.HttpStatus;
@@ -24,8 +25,8 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Product create(@RequestBody Product product) {
-        return service.create(product);
+    public Product createProduct(@RequestBody CreateProductRequest request) {
+        return service.createProduct(request);
     }
 
     @GetMapping("/{id}")
