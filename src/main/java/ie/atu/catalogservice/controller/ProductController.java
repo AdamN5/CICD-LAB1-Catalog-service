@@ -33,8 +33,8 @@ public class ProductController {
         return service.getById(id);
     }
 
-    @GetMapping("/search")
-    public List<Product> getByMinimumPrice(@RequestParam("minPrice") BigDecimal minPrice) {
-        return service.findByMinimumPrice(minPrice);
+    @GetMapping("/min-price")
+    public List<Product> getByMinPrice(@RequestParam("price") BigDecimal price) {
+        return service.getByMinPrice(price);
     }
 }

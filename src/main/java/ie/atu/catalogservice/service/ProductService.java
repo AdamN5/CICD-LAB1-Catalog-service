@@ -34,7 +34,7 @@ public class ProductService {
         ));
     }
 
-    public List<Product> findByMinimumPrice(BigDecimal minPrice) {
+    public List<Product> getByMinPrice(BigDecimal minPrice) {
         return repository.findByMinimumPrice(minPrice);
     }
 }
