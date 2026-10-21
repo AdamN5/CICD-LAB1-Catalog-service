@@ -18,4 +18,13 @@ public interface ProductRepository
            ORDER BY p.price ASC
            """)
     List<Product> findByMinimumPrice(@Param("minPrice") BigDecimal minPrice);
+
+    @Query("""
+           SELECT p
+           FROM Product p
+           JOIN p.category c
+           WHERE LOWER(c.name) = LOWER(:categoryName)
+           ORDER BY p.price ASC
+           """)
+    List<Product> findByCategoryName(@Param("categoryName") String categoryName);
 }
